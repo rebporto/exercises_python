@@ -3,17 +3,21 @@ import random
 
 print("BIENVENIDO AL JUEGO")
 
+name = input("qual o seu nome?: ")
+
 numero_secreto = random.randint(0, 20)
 adivinado = False
-print(f"o numero secreto es: {numero_secreto}")
+
 while not adivinado:
-    entrada = input("adivine un numero del 0 al 20: ")
-    number = int(entrada)
-    if number == numero_secreto:
-        print("felicitaciones!!")
-        adivinado = True
-    elif number > numero_secreto:
-        print("todavia no. el numero secreto es menor")
+    entrada = input(f"{name} escolha um numero de 0 a 20: ")
+    numero = int(entrada)
+
+    if numero == numero_secreto:
+        print("felicidades! voce acertou!")
+        adividado = True
+
+    elif numero > numero_secreto:
+        print(f"{name} o numero secreto é menor que o escolhido")
     else:
-        print("el numero secreto es mayor que ese")
-print("fin de juego")
+        print(f"{name} o numero secreto é maior que o escolhido")
+print("FIM DE JOGO")
